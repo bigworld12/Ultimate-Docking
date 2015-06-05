@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dockingManager="clr-namespace:DockingManager;assembly=DockingManager"
+        Title="MainWindow" Height="350" Width="525">
+   <Window.Resources>
+      <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="pack://application:,,,/DockingManager;component/Themes/DockingManager.xaml"></ResourceDictionary>
+            <ResourceDictionary Source="pack://application:,,,/DockingManager;component/Themes/DocumentContainer.xaml"></ResourceDictionary>
+            <ResourceDictionary Source="pack://application:,,,/DockingManager;component/Themes/AnchorableContainer.xaml"></ResourceDictionary>
+            <ResourceDictionary Source="pack://application:,,,/DockingManager;component/Themes/LayoutAnchorable.xaml"></ResourceDictionary>
+            <ResourceDictionary Source="pack://application:,,,/DockingManager;component/Themes/LayoutRoot.xaml"></ResourceDictionary>
+            <ResourceDictionary Source="pack://application:,,,/DockingManager;component/Themes/DockableGroup.xaml"></ResourceDictionary>
+            <ResourceDictionary Source="pack://application:,,,/DockingManager;component/Themes/DockableGroupItem.xaml"></ResourceDictionary>
+         </ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary>
+
+   </Window.Resources>
+   <Grid>
+      <dockingManager:DockableGroup TabStripPlacement="Left" Background="Green">
+         <dockingManager:DockableGroupItem Header="Test1">
+            <TextBlock Text="Test2"></TextBlock>
+         </dockingManager:DockableGroupItem>
+         <dockingManager:DockableGroupItem Header="Test2">
+            <TextBlock Text="Test1"></TextBlock>
+         </dockingManager:DockableGroupItem>
+         <dockingManager:DockableGroupItem Header="Test3">
+            <TextBlock Text="Test3"></TextBlock>
+         </dockingManager:DockableGroupItem>
+         <dockingManager:DockableGroupItem Header="Test4">
+            <TextBlock Text="Test5"></TextBlock>
+         </dockingManager:DockableGroupItem>
+      </dockingManager:DockableGroup>
+   </Grid>
+</Window>
